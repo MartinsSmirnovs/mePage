@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% set active_page = 'projects' %}
+
+{% block content %}
+
+<div class="row">
+    {% for i in lists %}
+        
+    <div class="card" style="width: 18rem;">
+
+        {% for j in i[1] %}
+            <p>{{ j["articleImages"] }}</p>
+        {% endfor %}
+        
+        <!-- <img class="card-img-top" src="{{ i[1] }}"> -->
+        <div class="card-body">
+            <h5 class="card-title">{{ i[0]['title'] }}</h5>
+            
+            <p class="card-text">{{ i[0]['content'] }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+    
+{% endblock %}

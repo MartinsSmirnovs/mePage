@@ -1,0 +1,115 @@
+/*HEADER*/
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+}
+
+/*MAIN*/
+body {
+    overflow-x: hidden;
+}
+
+footer{
+    color: #fff
+}
+
+p {
+    font-size: 14px
+}
+
+/*FOOTER*/
+.container-fluid {
+    background-color: #4527A0
+}
+
+.btn-pink:hover {
+    background-color: #F50057
+}
+
+.fa-mobile {
+    font-size: 20px;
+    width: 180px !important;
+}
+
+#contact {
+    font-size: 18px
+}
+
+#email {
+    width: 280px;
+}
+
+.grey-text {
+    color: lightgrey
+}
+
+/*SOCIAL MEDIA BUTTONS*/
+
+/* Style all font awesome icons */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-github {
+    background: #24292e;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+.footer_class {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* NAV */
+
+#active{
+    color:white;
+    text-decoration: underline;
+}
+
+/*MAIN PAGE BANNER*/
+
+#centerBanner{
+    position: relative;
+    top: 50%;
+    background-color: rgba(0, 0, 0, .85);
+    transform: translate(0%,50%);
+}
+
+#mainIMG{
+    max-width: 100%;
+}

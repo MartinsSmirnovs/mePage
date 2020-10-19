@@ -1,1 +1,15 @@
-{% extends "bootstrap/base.html" %}
+{% extends "layout.html" %}
+{% set active_page = 'home' %}
+
+{% block content %}
+<div class="jumbotron container d-flex justify-content-center" id="centerBanner">
+    <div class="container">
+        <h1 class="display-4 text-light">Hello, I am Embedded engineer!</h1>
+        <p class="lead text-light">Coming up with embedded solutions for 2 years now.</p>
+        <p class="lead text-light">Programming microcontrollers and developing additional electronics for them. </p>
+    </div>
+    <div class="container">
+        <img src="{{ url_for('static', filename='pics/LampPic.jpg') }}" id="mainIMG">
+    </div>
+</div>
+{% endblock %}
