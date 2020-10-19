@@ -5,7 +5,8 @@ CREATE TABLE article (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT,
     content TEXT,
-    videoLink TEXT
+    videoLink TEXT,
+    urlExtension TEXT
 );
 
 CREATE TABLE images (

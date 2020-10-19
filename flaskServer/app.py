@@ -26,12 +26,6 @@ def contacts():
 @app.route("/projects")
 def projects():
     conn = get_db_connection()
-    
-    # articles = conn.execute('SELECT i.imageName, l.title FROM images i JOIN article l \
-    #                       ON i.list_id = l.id ORDER BY l.title;').fetchall()
-    # lists = {}
-    # for k, g in groupby(articles, key=lambda t: t['title']):
-        # lists[k] = list(g)
 
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM article")
@@ -58,7 +52,24 @@ def projects():
 
     conn.close()
     # return render_template('projects.html', lists=lists)
-    return render_template('projects.html', lists=lists)
+    return render_template("public/projects.html", lists=lists)
+
+@app.route("/projects/<post>")
+def page(post):
+    conn = get_db_connection()
+
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM article")
+
+    cursor = cursor.fetchall()    
+    i = 0
+    for x in cursor:
+        i += 1
+        print(i)
+        if x['urlExtension'] == post:            
+            break
+    
+    return render_template("public/post.html", values=cursor[i-1])
 
 if __name__ == '__main__':
     app.run(debug=True)
