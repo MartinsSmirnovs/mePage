@@ -47,12 +47,13 @@ def projects():
                 imgList.append(j)
         dataList.append(imgList)
         lists.append(dataList)
-    
-    # print(lists[0][1][0]['articleImages'])
 
     conn.close()
+    
+    print(lists[0][1][0]['articleImages'])
+
     # return render_template('projects.html', lists=lists)
-    return render_template("public/projects.html", lists=lists)
+    return render_template("public/projects.html", lists=lists, listLen=len(lists))
 
 @app.route("/projects/<post>")
 def page(post):
@@ -61,15 +62,27 @@ def page(post):
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM article")
 
+    #fetches all text data for article
     cursor = cursor.fetchall()    
     i = 0
     for x in cursor:
         i += 1
-        print(i)
         if x['urlExtension'] == post:            
             break
-    
-    return render_template("public/post.html", values=cursor[i-1])
+
+    images = conn.cursor()
+    images.execute("SELECT * FROM images")
+
+    #fetches all data for images
+    imageList = []
+    images = images.fetchall()
+    for x in images:
+        if x['list_id'] == i:
+            imageList.append(x)
+
+
+    conn.close()
+    return render_template("public/post.html", values=cursor[i-1], imageList=imageList, imageListLen=len(imageList))
 
 if __name__ == '__main__':
     app.run(debug=True)
