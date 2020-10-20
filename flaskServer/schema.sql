@@ -6,7 +6,8 @@ CREATE TABLE article (
     title TEXT,
     content TEXT,
     videoLink TEXT,
-    urlExtension TEXT
+    urlExtension TEXT,
+    videoLink TEXT
 );
 
 CREATE TABLE images (
@@ -15,5 +16,5 @@ CREATE TABLE images (
     articleImages TEXT,
     testText TEXT,
     imageName TEXT NOT NULL,
-    FOREIGN KEY (list_id) REFERENCES article (id)
+    FOREIGN KEY (list_id) REFERENCES article (id),
 );
