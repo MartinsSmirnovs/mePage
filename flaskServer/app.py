@@ -79,10 +79,13 @@ def page(post):
     for x in images:
         if x['list_id'] == i:
             imageList.append(x)
-
+    
+    video = False
+    if cursor[i-1]['videoLink'] != None:
+        video = True
 
     conn.close()
-    return render_template("public/post.html", values=cursor[i-1], imageList=imageList, imageListLen=len(imageList))
+    return render_template("public/post.html", values=cursor[i-1], imageList=imageList, imageListLen=len(imageList), video=video)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -27,7 +27,6 @@ p {
 
 /*FOOTER*/
 .container-fluid {
-    background-color: #4527A0
 }
 
 .btn-pink:hover {
@@ -91,9 +90,12 @@ p {
 
 .footer_class {
     position: relative;
-    bottom: 0;
     width: 100%;
-    display: block;
+    background-color: #4527A0;
+    margin-top: 230px;
+}
+
+.contentClass{
 }
 
 /* NAV */
@@ -109,7 +111,8 @@ p {
     position: relative;
     top: 50%;
     background-color: rgba(0, 0, 0, .85);
-    transform: translate(0%,50%);
+    transform: translate(0%,40%);
+    margin-bottom: 360px;
 }
 
 #mainIMG{

@@ -30,20 +30,24 @@
                         <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
                     </svg>
                 </a>
-                <a class="py-2 d-none d-md-inline-block" href="/"         {% if active_page=='home' %} id="active" {% endif %} >Home</a>
-                <a class="py-2 d-none d-md-inline-block" href="/projects" {% if active_page=='projects' %} id="active" {% endif %} >Projects</a>
-                <a class="py-2 d-none d-md-inline-block" href="/about_me" {% if active_page=='about_me' %} id="active" {% endif %}>About Me</a>
-                <a class="py-2 d-none d-md-inline-block" href="/contacts" {% if active_page=='contacts' %} id="active" {% endif %}>Contacts</a>
+                <a class="py-2 d-none d-md-inline-block" href="/" {% if active_page=='home' %} id="active"
+                    {% endif %}>Home</a>
+                <a class="py-2 d-none d-md-inline-block" href="/projects" {% if active_page=='projects' %} id="active"
+                    {% endif %}>Projects</a>
+                <a class="py-2 d-none d-md-inline-block" href="/about_me" {% if active_page=='about_me' %} id="active"
+                    {% endif %}>About Me</a>
+                <a class="py-2 d-none d-md-inline-block" href="/contacts" {% if active_page=='contacts' %} id="active"
+                    {% endif %}>Contacts</a>
                 <a class="py-2 d-none d-md-inline-block" href="#">Eng</a>
             </div>
         </nav>
     </header>
 
     {% block content %}{% endblock %}
-    
 
-    <footer class = "footer_class">
-        <div class="container-fluid mx-auto">
+
+    <footer class="footer_class fixed-bottom">
+        <div class="mx-auto">
             <div class="row bottom-part">
                 <div class="d-lg-flex justify-content-between bd-highlight col-md-12 mb-5 px-5">
 
@@ -54,11 +58,11 @@
                         <a href="#" class="fa fa-instagram"></a>
                     </div>
 
-                   
-                    
                     <div class="p-2 align-self-center flex-fill bd-highlight text-right">
-                        <div class="fa fa-mobile px-2 grey-text">&nbsp;&nbsp;<span id="contact">+371 26473480</span></div>
-                        <div class="fa fa-envelope-o px-2 grey-text" id ="email">&nbsp;&nbsp;<span >martinnc@inbox.lv</span></div>
+                        <div class="fa fa-mobile px-2 grey-text">&nbsp;&nbsp;<span id="contact">+371 26473480</span>
+                        </div>
+                        <div class="fa fa-envelope-o px-2 grey-text" id="email">
+                            &nbsp;&nbsp;<span>martinnc@inbox.lv</span></div>
                     </div>
                 </div>
             </div>

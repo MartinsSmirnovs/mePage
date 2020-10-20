@@ -8,7 +8,7 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO article (urlExtension, title, content) VALUES (?,?,?)", ('bottlender-prototype', 'Bottlender-prototype', '''Usage
+cur.execute("INSERT INTO article (videoLink, urlExtension, title, content) VALUES (?,?,?,?)", ('https://www.youtube.com/embed/XmpsruNHdzo','bottlender-prototype', 'Bottlender-prototype', '''Usage
 THIS IS PROTOTYPE!
 
 This is mobile app code and hardware code + circuit for automatic air cannon. It was made during Sporthack 2020 to deliver small packages that would fall down from air using parachutes. The mechanical part is not included. This cannon is built like a turret and can be made to shoot at certain locations using formulas and right calculations.
