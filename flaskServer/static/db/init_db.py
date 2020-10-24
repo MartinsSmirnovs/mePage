@@ -126,31 +126,35 @@ Examples
 <0000> type = 0 value = 0'''))
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (1, 'Image 1', 'https://www.somagnews.com/wp-content/uploads/2020/09/1599647767_244123_1599647831_noticia_normal.jpg')
+            (1, 'Image 1', 'https://i.ibb.co/cvDFT9z/botlender.jpg')
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (1, 'Image 2', 'https://ih1.redbubble.net/image.1573052278.8041/st,small,507x507-pad,600x600,f8f8f8.jpg')
+            (1, 'Image 2', 'https://i.ibb.co/F5wj4L1/IMG-3368.jpg')
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (2, 'Image 3', 'https://ih1.redbubble.net/image.1573052278.8041/st,small,507x507-pad,600x600,f8f8f8.jpg')
+            (2, 'Image 3', 'https://i.ibb.co/T2dfJhy/20201024-171717.jpg')
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (3, 'Image 4', 'https://ih1.redbubble.net/image.1681670101.0178/st,small,507x507-pad,600x600,f8f8f8.jpg')
+            (2, 'Image 8','https://i.ibb.co/j3kJ1Hm/cropped-controller.png' )
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (3, 'Image 5', 'https://www.somagnews.com/wp-content/uploads/2020/09/1599647767_244123_1599647831_noticia_normal.jpg')
+            (3, 'Image 4', 'https://i.ibb.co/gDbVRdN/cropped-arm.png')
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (4, 'Image 6', 'https://ih1.redbubble.net/image.1667702518.3342/st,small,507x507-pad,600x600,f8f8f8.jpg')
+            (3, 'Image 5', 'https://i.ibb.co/qJG7zCK/pcb.jpg')
             )
 
 cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
-            (5, 'Image 7s', 'https://ih1.redbubble.net/image.1681663462.0030/st,small,507x507-pad,600x600,f8f8f8.jpg')
+            (4, 'Image 6', 'https://cdn.instructables.com/ORIG/FNW/JL9R/J4G55G4V/FNWJL9RJ4G55G4V.png?fit=bounds&frame=1')
+            )
+
+cur.execute("INSERT INTO images (list_id, imageName, articleImages) VALUES (?, ?, ?)",
+            (5, 'Image 7s', 'https://i1.wp.com/collegeroadonline.com/wp-content/uploads/2020/01/hc05-550x550h.jpg?fit=550%2C550')
             )
 connection.commit()
 connection.close()

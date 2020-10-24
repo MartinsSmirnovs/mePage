@@ -1,11 +1,10 @@
-from itertools import groupby
 import sqlite3
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 
 #connects to database
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('static\db\database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
