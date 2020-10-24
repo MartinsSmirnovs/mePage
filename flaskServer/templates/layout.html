@@ -38,7 +38,7 @@
                     {% endif %}>About Me</a>
                 <a class="py-2 d-none d-md-inline-block" href="/contacts" {% if active_page=='contacts' %} id="active"
                     {% endif %}>Contacts</a>
-                <a class="py-2 d-none d-md-inline-block" href="#">Eng</a>
+                <!-- <a class="py-2 d-none d-md-inline-block" href="#">Eng</a> -->
             </div>
         </nav>
     </header>
@@ -52,10 +52,15 @@
                 <div class="d-lg-flex justify-content-between bd-highlight col-md-12 mb-5 px-5">
 
                     <div class="p-2 align-self-center bd-highlight">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-github"></a>
-                        <a href="#" class="fa fa-instagram"></a>
+                        <!--FACEBOOK PLUGIN-->
+                        <iframe
+                            src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A5000%2F&layout=button&size=large&width=77&height=28&appId"
+                            width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowTransparency="true" allow="encrypted-media"></iframe>
+                        <!--TWITTER PLUGIN-->
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a href="https://github.com/Onii-Chaan" class="fa fa-github"></a>
+                        <a href="https://www.instagram.com/martinncss/" class="fa fa-instagram"></a>
                     </div>
 
                     <div class="p-2 align-self-center flex-fill bd-highlight text-right">
@@ -68,7 +73,6 @@
             </div>
         </div>
     </footer>
-
 
 
 

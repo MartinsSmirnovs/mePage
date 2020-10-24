@@ -1,14 +1,25 @@
 from itertools import groupby
 import sqlite3
 from flask import Flask, render_template, request, flash, redirect, url_for
+from flask_mail import Mail, Message
 
+#connects to database
 def get_db_connection():
     conn = sqlite3.connect('database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
+
+# setup for email
 app.config['SECRET_KEY'] = 'secret_random_string'
+app.config['MAIL_SERVER'] = "smtp.gmail.com"
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = "mailtestm16@gmail.com"
+app.config['MAIL_PASSWORD'] = "itnefgxjcygivpwd"
+app.config['MAIL_DEFAULT_SENDER'] = "mailtestm16@gmail.com"
+mail = Mail(app)
 
 
 @app.route("/")
@@ -19,8 +30,17 @@ def index():
 def about():
     return render_template('about_me.html')
 
-@app.route("/contacts")
+@app.route("/contacts", methods=['GET'])
 def contacts():
+    if request.method == 'GET':
+        email = request.args.get('email')
+        title = request.args.get('title')
+        textIn = request.args.get('textIn')
+        msg = Message(title, sender = email, recipients = ["heart1@inbox.lv"])
+        msg.body = textIn
+        if isinstance(textIn, str) :
+            mail.send(msg)
+
     return render_template('contacts.html')
 
 @app.route("/projects")
